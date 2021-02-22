@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "faker"
+
+Page.destroy_all
+
+10.times do
+  Page.create(
+    body: Faker::Hacker.say_something_smart,
+    title: Faker::Hacker.abbreviation,
+    author: Faker::Name.name,
+  )
+end
+
+puts "Seeded you have #{Page.all.size} pages"
+
