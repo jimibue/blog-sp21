@@ -20,6 +20,7 @@ const Pages = (props) => {
     return(
         <div>
             <h1>Pages</h1>
+            <a href='/pages/new'> new page form</a>
             {renderPages()}
         </div>   
     )
